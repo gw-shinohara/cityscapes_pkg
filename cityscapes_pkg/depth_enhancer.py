@@ -31,8 +31,8 @@ class DepthEnhancerNode(Node):
         )
 
         # Subscriberの作成
-        left_image_sub = message_filters.Subscriber(self, Image, '/cityscape/front/image_raw', qos_profile=qos_profile)
-        right_image_sub = message_filters.Subscriber(self, Image, '/cityscape/right/image_raw', qos_profile=qos_profile)
+        left_image_sub = message_filters.Subscriber(self, Image, '/cityscape/front/left/image_raw', qos_profile=qos_profile)
+        right_image_sub = message_filters.Subscriber(self, Image, '/cityscape/front/right/image_raw', qos_profile=qos_profile)
         camera_info_sub = message_filters.Subscriber(self, CameraInfo, '/cityscape/front/camera_info', qos_profile=qos_profile)
 
         # 3つのトピックを同期
