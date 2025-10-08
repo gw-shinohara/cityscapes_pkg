@@ -41,8 +41,8 @@ class CityScapeRos2Streamer(Node):
         # Publisherの作成
         self.cv_bridge = CvBridge()
         self.image_publishers = {
-            'front_image': self.create_publisher(Image, '/cityscape/front/image_raw', 10),
-            'right_image': self.create_publisher(Image, '/cityscape/right/image_raw', 10),
+            'front_image': self.create_publisher(Image, '/cityscape/front/left/image_raw', 10),
+            'right_image': self.create_publisher(Image, '/cityscape/front/right/image_raw', 10),
         }
         self.camera_info_publisher = self.create_publisher(CameraInfo, '/cityscape/front/camera_info', 10)
         self.gps_publisher = self.create_publisher(NavSatFix, '/cityscape/gps/fix', 10)
